@@ -11,9 +11,9 @@ class User
     private string $login;
 
     /**
-     * @param int $id - это id ползователя
-     * @param Name $username
-     * @param string $login
+     * @param int $id - id ползователя
+     * @param Name $username имя 
+     * @param string $login логин
      */
     public function __construct(int $id, Name $username, string $login)
     {
