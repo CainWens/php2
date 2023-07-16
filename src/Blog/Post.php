@@ -2,23 +2,23 @@
 
 namespace GeekBrains\LT\Blog;
 
-use GeekBrains\LT\Person\Person;
+use GeekBrains\LT\Blog\User;
 
 class Post
 {
     private int $id;
-    private Person $author;
+    private User $user;
     private string $text;
 
-    public function __construct(int $id, Person $author, string $text)
+    public function __construct(int $id, User $user, string $text)
     {
         $this->id = $id;
-        $this->author = $author;
+        $this->user = $user;
         $this->text = $text;
     }
 
     public function __toString(): string
     {
-        return $this->author . ' пишет: ' . $this->text . PHP_EOL;
+        return $this->user . ' пишет: ' . $this->text . PHP_EOL;
     }
 }

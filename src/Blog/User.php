@@ -6,25 +6,25 @@ use GeekBrains\LT\Person\Name;
 
 class User
 {
-    private int $id;
+    private UUID $uuid;
     private Name $username;
     private string $login;
 
     /**
-     * @param int $id - id ползователя
+     * @param UUID $uuid - id ползователя
      * @param Name $username имя 
      * @param string $login логин
      */
-    public function __construct(int $id, Name $username, string $login)
+    public function __construct(UUID $uuid, Name $username, string $login)
     {
-        $this->id = $id;
+        $this->uuid = $uuid;
         $this->username = $username;
         $this->login = $login;
     }
 
     public function __toString(): string
     {
-        return "Юзер $this->id с именем $this->username и логином $this->login." . PHP_EOL;
+        return "Юзер $this->uuid с именем $this->username и логином $this->login." . PHP_EOL;
     }
 
 
@@ -33,10 +33,18 @@ class User
     /**
      * Get the value of id
      */
-    public function getId()
+    public function uuid(): UUID
     {
-        return $this->id;
+        return $this->uuid;
     }
 
+    public function name(): Name
+    {
+        return $this->username;
+    }
 
+    public function login(): string
+    {
+        return $this->login;
+    }
 }
