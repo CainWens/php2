@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "php2",
+            "database": "${workspaceFolder:php2}/blog.sql"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

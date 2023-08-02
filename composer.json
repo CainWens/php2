@@ -12,9 +12,20 @@
         }
     ],
     "require": {
-        "fakerphp/faker": "^1.23"
+        "php": "^8.0",
+        "ext-fileinfo": "*",
+        "ext-intl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "fakerphp/faker": "^1.23",
+        "ext-pdo": "*",
+        "symfony/polyfill-uuid": "^1.27"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest"
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "*"
+    },
+    "scripts": {
+        "test": "phpunit tests --testbox --colors"
     }
 }
